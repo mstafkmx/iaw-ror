@@ -180,12 +180,6 @@ body {
     color: #424242;
 }
 
-/*Form*/
-/*label, input {*/
-/*display: block;*/
-/*padding: 5px;*/
-/*}*/
-
 div.error {
     background-color: #FF8F8F;
     border: 1px solid #FF1111;
@@ -678,7 +672,7 @@ ul, li {
     font-size: 14px;
     font-family: helvetica, arial, sans-serif;
     text-decoration: none;
-    padding: 12px 8px;
+    padding: 12px 10px;
 }
 
 /* Languages */

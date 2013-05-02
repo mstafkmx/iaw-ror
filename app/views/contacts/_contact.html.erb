@@ -1,19 +1,43 @@
 <div>
-  <%= form_for (@contact) do |c| %>
-  <div>
-    <%= c.label :nombre %>
-    <%= c.text_field :nombre %>
+  <div class="divForm">
+    <%= form_for (@contact) do |c| %>
+        <div class="divForm">
+          <div class="formLabel">
+            <%= c.label :nombre %>:<span>*</span>
+          </div>
+          <div class="formInput">
+            <%= c.text_field :name , :class => "textField" %>
+          </div>
+        </div>
+        <div class="divForm">
+          <div class="formLabel">
+            <%= c.label :mail %>:<span>*</span>
+          </div>
+          <div class="formInput">
+            <%= c.text_field :mail, :class => "textField" %>
+          </div>
+        </div>
+        <div class="divForm">
+          <% lista = { "España" => "es", "Francia" => "fr", "USA" => "us", "Marruecos" => "ma", "Otro" => "other" } %>
+          <% countries = lista.sort %>
+          <div class="formLabel">
+            <%= c.label :pais %>:<span>*</span>
+          </div>
+          <div class="formInput">
+            <%= c.select :country, countries, :selected => "es", :class => "select" %>
+          </div>
+        </div>
+        <div class="divFormTextArea">
+          <div class="formLabel">
+            <%= c.label :mensaje %>:<span>*</span>
+          </div>
+          <div class="formInput">
+            <%= c.text_area :message , :class => "textArea" %>
+          </div>
+        </div>
+        <div class="divFormBoton">
+          <%= c.submit "Enviar" , :class => "boton" %>
+        </div>
+    <% end %>
   </div>
-  <div>
-    <%= c.label :mail %>
-    <%= c.text_field :mail %>
-  </div>
-  <div>
-    <%= c.label :mensaje %>
-    <%= c.text_area :message %>
-  </div>
-  <div>
-    <%= c.submit "Enviar" %>
-  </div>
-  <% end %>
 </div>
