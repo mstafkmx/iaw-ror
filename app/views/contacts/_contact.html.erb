@@ -1,0 +1,19 @@
+<div>
+  <%= form_for (@contact) do |c| %>
+  <div>
+    <%= c.label :nombre %>
+    <%= c.text_field :nombre %>
+  </div>
+  <div>
+    <%= c.label :mail %>
+    <%= c.text_field :mail %>
+  </div>
+  <div>
+    <%= c.label :mensaje %>
+    <%= c.text_area :message %>
+  </div>
+  <div>
+    <%= c.submit "Enviar" %>
+  </div>
+  <% end %>
+</div>

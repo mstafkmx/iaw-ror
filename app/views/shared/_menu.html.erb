@@ -1,0 +1,14 @@
+<div id="header">
+    <div id="logo">
+        <%= link_to image_tag('logo.png', :id => "logoImage", :alt => "Ism Amazigh Web", :title => "Ism Amazigh Web"), url_for(:controller => 'names', :action => "index")%>
+    </div>
+    <div id="menu">
+        <ul id="nav">
+            <li><%= link_to "Inicio", url_for( :controller => 'names', :action => "index" ) %></li>
+            <li><%= link_to "Contacto", url_for( :controller => 'contacts', :action => "index" ) %></li>
+            <li><%= link_to "Recomendar", url_for( :controller => 'recomendations', :action => "index" ) %></li>
+            <li><%= link_to "Aplicación móvil", url_for( :controller => 'mobileapp', :action => "index" ) %></li>
+            <li><%= link_to "Acerca de", url_for( :controller => 'aboutme', :action => "index" ) %></li>
+        </ul>
+    </div>
+</div>

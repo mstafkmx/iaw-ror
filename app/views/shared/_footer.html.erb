@@ -1,0 +1,13 @@
+<div id="footer">
+  <div id="logofooter">
+    <%= image_tag "logomobileapp.png", :id => "imageLogoFooter", :title => "Logo app", :alt => "logo app" %>
+  </div>
+  <div id="contentfooter">
+    <%= link_to "Inicio", url_for( :controller => 'names', :action => "index" ) %>
+    <%= link_to "Contacto", url_for( :controller => 'contacts', :action => "index" ) %>
+    <%= link_to "Recomendar", url_for( :controller => 'recomendations', :action => "index" ) %>
+    <%= link_to "Aplicación móvil", url_for( :controller => 'mobileapp', :action => "index" ) %>
+    <%= link_to "Acerca de", url_for( :controller => 'aboutme', :action => "index" ) %>
+    <p>© Copyright 2013 Ism Amazigh. Todos los derechos reservados</p>
+  </div>
+</div>

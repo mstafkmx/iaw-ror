@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>IsmAmazigh Web</title>
+  <%= stylesheet_link_tag    "application", media: "all", "data-turbolinks-track" => true %>
+  <%= javascript_include_tag "application", "data-turbolinks-track" => true %>
+  <%= csrf_meta_tags %>
+</head>
+<body>
+    <div id="container">
+        <%= render "shared/menu" %>
+        <div id="content">
+            <div id="contentpage">
+                <%= yield %>
+            </div>
+            <%= render "shared/fcbk" %>
+        </div>
+        <%= render "shared/footer" %>
+    </div>
+</body>
+<script type="text/javascript" src="jquery.spasticNav.js"></script>
+<script type="text/javascript">$('#nav').spasticNav();</script>
+</html>
