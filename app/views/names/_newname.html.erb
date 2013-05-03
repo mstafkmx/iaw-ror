@@ -1,0 +1,42 @@
+<div id="popupNewName11">
+  <div id="divpopupnewnameclose">
+    <a id="divPopupNewNameClose">X Cerrar</a>
+  </div>
+  <div id="titlePopUp" class="title">
+    Ism Amazigh > Añadir nuevo nombre
+  </div>
+  <br />
+  <div id="newNameError"></div>
+  <div id="homeFormNewName">
+      <%= form_for (@name) do |n| %>
+        <div id="newNameName" class="divForm">
+          <div class="formLabel">
+            <%= n.label :nombre %>:<span>*</span>
+          </div>
+          <div class="formInput">
+            <%= n.text_field :name, :class => "textField" %>
+          </div>
+        </div>
+        <div id="newNameRadio" class="divForm">
+          <div class="formLabel">
+            <%= n.label :sexo %>:<span>*</span>
+          </div>
+          <div class="formInput">
+            <%= n.label :chico, :class => "labelSex" %><%= n.radio_button :sex, :class => "sexName", :name => "newNameRadioSex", :checked => true %>
+            <%= n.label :chica, :class => "labelSex" %><%= n.radio_button :sex, :class => "sexName", :name => "newNameRadioSex" %>
+          </div>
+        </div>
+        <div id="newNameMeaning" class="divFormTextArea">
+          <div class="formLabel">
+            <%= n.label :significado %>:<span>*</span>
+          </div>
+          <div id="newNameTextMeaningDiv" class="formInput">
+            <%= n.text_area :meaning, :class => "textArea", :text => "Significado" %>
+          </div>
+        </div>
+        <div id="newNameSend" class="divFormBoton">
+          <%= n.submit :enviar, :class => "boton" %>
+        </div>
+      <% end %>
+  </div>
+</div>

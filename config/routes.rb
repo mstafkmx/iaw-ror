@@ -2,6 +2,7 @@ Ismamazigh::Application.routes.draw do
 
   resource "contacts"
   resource "recomendations"
+  resource "names"
 
   get "aboutme/index"
   get "mobileapp/index"
