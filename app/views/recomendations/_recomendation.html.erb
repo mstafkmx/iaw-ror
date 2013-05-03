@@ -1,0 +1,41 @@
+<div>
+  <div class="divForm">
+    <%= form_for (@recomendation) do |r| %>
+        <div class="divForm">
+          <div class="formLabel">
+            <%= r.label :tu_nombre %>:<span>*</span>
+          </div>
+          <div class="formInput">
+            <%= r.text_field :namesender , :class => "textField" %>
+          </div>
+        </div>
+        <div class="divForm">
+          <div class="formLabel">
+            <%= r.label :tu_mail %>:<span>*</span>
+          </div>
+          <div class="formInput">
+            <%= r.text_field :mailsender, :class => "textField" %>
+          </div>
+        </div>
+        <div class="divForm">
+          <div class="formLabel">
+            <%= r.label :nombre %>:<span>*</span>
+          </div>
+          <div class="formInput">
+            <%= r.text_field :namereceiver , :class => "textField" %>
+          </div>
+        </div>
+        <div class="divForm">
+          <div class="formLabel">
+            <%= r.label :mail %>:<span>*</span>
+          </div>
+          <div class="formInput">
+            <%= r.text_field :mailreceiver, :class => "textField" %>
+          </div>
+        </div>
+        <div class="divFormBoton">
+          <%= r.submit "Enviar" , :class => "boton" %>
+        </div>
+    <% end %>
+  </div>
+</div>
