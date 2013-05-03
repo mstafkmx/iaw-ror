@@ -1,0 +1,40 @@
+<%= form_for (@name) do |n| %>
+<div id="homeRadio" class="divForm">
+  <div class="formLabel">
+    <%= n.label :sexo %>
+  </div>
+  <div class="formInput">
+    <%= n.label :chico, :class => "labelSex" %><%= n.radio_button :sex, :class => "sexName", :name => "newNameRadioSex"%>
+    <%= n.label :chica, :class => "labelSex" %><%= n.radio_button :sex, :class => "sexName", :name => "newNameRadioSex" %>
+    <%= n.label :Todos, :class => "labelSex" %><%= n.radio_button :sex, :class => "sexName", :name => "newNameRadioSex", :checked => true  %>
+  </div>
+</div>
+<div id="homeSelectName" class="divForm">
+  <div class="formLabel">
+    <%= n.label :nombre %>
+  </div>
+  <div id="homeSelectNameSelect" class="divFormSelectName">
+    <% names = { "nombre1" => "1", "nombre2" => "2" } %>
+    <%= n.select :name, names, :name => "name", :selected => "1", :class => "select" %>
+  </div>
+  <div id="homeSelectNameBtn" class="divFormSelectName" style="width: 198px; text-align: right">
+    <%= n.submit :nuevo_nombre, :class => "boton" %>
+  </div>
+</div>
+<div class="divFormTextArea">
+  <div class="formLabel">
+    <%= n.label :significado %>
+  </div>
+  <div id="homeMeaning" class="formInput">
+    <%= n.text_area :meaning, :class => "textArea", :readonly => true %>
+  </div>
+</div>
+<div id="homeBtnSendCorrection" class="divFormBoton">
+  <div id="resultCorrectNameDiv">
+    <span id="messageCorrectName"></span>
+  </div>
+  <%= n.submit :corregir, :class => "boton"%>
+  <%= n.submit :cancelar, :class => "boton" %>
+  <%= n.submit :enviar, :class => "boton" %>
+</div>
+<% end %>
