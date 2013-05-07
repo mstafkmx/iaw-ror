@@ -6,12 +6,18 @@ class ContactsController < ApplicationController
   def show
   end
 
-  def create
+  def new
     @contact = Contact.new
+  end
+
+  def create
+    #debugger
+    @contact = Contact.new
+    
     if @contact.save
-      redirect_to contacts_path, :notice => "Mensaje enviado"
+      render "contacts/sent"
     else
-      render "contacts/index"
+      redirect_to contacts_path, :notice => "Mensaje enviado"
     end
   end
 end

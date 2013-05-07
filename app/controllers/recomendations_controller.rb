@@ -6,12 +6,17 @@ class RecomendationsController < ApplicationController
   def show
   end
 
+  def new
+    @recomendation = Recomendation.new
+  end
+
   def create
-    @recomendation = recomendation.new
+    @recomendation = Recomendation.new
+
     if @recomendation.save
-      redirect_to recomendations_path, :notice => "Mensaje enviado"
+      render "recomendations/sent"
     else
-      render "recomendations/index"
+      redirect_to recomendations_path, :notice => "Mensaje enviado"
     end
   end
 end
